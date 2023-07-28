@@ -1,0 +1,27 @@
+from tkinter import *
+rs=Tk()
+rs.title("Addition")
+rs.geometry("300x200")
+number1=Label(rs,text="Enter the number 1:")
+number1.grid(row=0,column=0,pady=10,padx=5)
+#Creating Entry methods 
+e1=Entry(rs)
+e1.grid(row=0,column=1)
+number2=Label(rs,text="Enter the  Number2")
+number2.grid(row=1,column=0,pady=10,padx=5)
+#using grid method
+e2=Entry(rs)
+e2.grid(row=1,column=1)
+#Creating User defined functions 
+def add():
+    a=int(e1.get())
+    b = int(e2.get())
+    c=a+b
+    lbl['text']=c
+# Creating Buttons 
+button=Button(rs,text="Add",command=add)
+button.grid()
+lbl=Label(rs)
+lbl.grid()
+#Creating the mainloop function 
+rs.mainloop()
